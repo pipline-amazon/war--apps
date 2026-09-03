@@ -8,17 +8,38 @@
     <groupId>com.anurag</groupId>
     <artifactId>certificate-app</artifactId>
     <version>1.0</version>
-    <packaging>war</packaging>
+    <packaging>war</packaging> m
+
+    <properties>
+        <sonar.host.url>http://13.210.14.138:9000/</sonar.host.url>
+    </properties>
+
+   <distributionManagement>
+    <repository>
+        <id>nexus</id>
+        <url>http://13.232.183.130:8081/repository/amazon-release/</url>
+    </repository>
+
+    <snapshotRepository>
+        <id>nexus</id>
+        <url>http://13.232.183.130:8081/repository/amazon-Snapshot/</url>
+    </snapshotRepository>
+   </distributionManagement>
 
     <build>
         <finalName>certificate-app</finalName>
-
+       
         <plugins>
-            <plugin>
+       <plugin>
+                  <groupId>org.sonarsource.scanner.maven</groupId>
+                  <artifactId>sonar-maven-plugin</artifactId>
+                  <version>5.3.0.6276</version>                                                             
+                  </plugin> 
+        <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.4.0</version>
-            </plugin>
+        </plugin>
         </plugins>
     </build>
 
