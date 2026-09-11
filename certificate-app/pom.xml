@@ -17,12 +17,12 @@
    <distributionManagement>
     <repository>
         <id>nexus</id>
-        <url>http://13.232.183.130:8081/repository/amazon-release/</url>
+        <url>http://13.201.134.2:8081/repository/test-relese/</url>
     </repository>
 
     <snapshotRepository>
         <id>nexus</id>
-        <url>http://13.232.183.130:8081/repository/amazon-Snapshot/</url>
+        <url>http://13.201.134.2:8081/repository/test-Snapshot/</url>
     </snapshotRepository>
    </distributionManagement>
 
